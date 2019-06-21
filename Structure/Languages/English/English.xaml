@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Structure.Languages.English"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib"
+                    >
+    <System:String  x:Key="ChooseReport">Choose Report</System:String>
+    <System:String  x:Key="ChooseLogo">Choose Logo</System:String>
+</ResourceDictionary>

@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Structure.Themes.Black">
+
+
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/Common/CommonClrs.xaml" ></ResourceDictionary>
+        <ResourceDictionary Source="DialogWindowTheme.xaml"  ></ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+
+    <SolidColorBrush x:Key="ManinBackgroundClr" Color="{StaticResource #000000}" />
+    <SolidColorBrush x:Key="SeparatorClr" Color="{StaticResource #DCE0E4}" />
+    <SolidColorBrush x:Key="LableClr" Color="{StaticResource #FFFFFF}" />
+    <SolidColorBrush x:Key="ComboBoxBackgroundClr" Color="{StaticResource #Transparent}" />
+    <SolidColorBrush x:Key="ComboBoxBorderBrushClr" Color="{StaticResource #FFFFFF}" />
+</ResourceDictionary>

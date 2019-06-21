@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Structure.Themes.Common">
+
+
+    <Color x:Key="#FFFFFF">#FFFFFF</Color>
+    
+    <Color x:Key="#000000">#000000</Color>
+
+    <!--Bule-->
+    <Color x:Key="#31568B">#31568B</Color>
+    
+    <!--LightWhite-->
+    <Color x:Key="#DCE0E4">#DCE0E4</Color>
+    
+    <!--LightBrown-->
+    <Color x:Key="#BBBCBF">#BBBCBF</Color>
+
+    <!--LightBrown-->
+    <Color x:Key="#Transparent">Transparent</Color>
+</ResourceDictionary>

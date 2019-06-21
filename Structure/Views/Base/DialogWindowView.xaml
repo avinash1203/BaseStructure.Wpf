@@ -1,0 +1,49 @@
+﻿<Window x:Class="Structure.Views.Base.DialogWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:local="clr-namespace:Structure.Views.Base" SizeToContent="{Binding WindowSizeToContent}" ResizeMode="{Binding WindowReSizeMode}"
+        mc:Ignorable="d" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="{DynamicResource ManinBackgroundClr}" Height="{Binding WindowHeight}" Width="{Binding WindowWidth}"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:cmd="clr-namespace:Structure.Commands"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="{DynamicResource ManinBackgroundClr}" >
+            <i:Interaction.Behaviors>
+                <cmd:EventToCommand Command="{Binding HeaderMouseDown}" Event="MouseDown" CommandParameter="sss" PassArguments="True"/>
+            </i:Interaction.Behaviors>
+          
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="20*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Image Source="{DynamicResource CompanyIcon}">
+            </Image>
+            <Grid Grid.Column="2"  Background="Transparent">
+                <i:Interaction.Behaviors>
+                    <cmd:EventToCommand Command="{Binding CloseCommand}" Event="MouseLeftButtonUp" PassArguments="True"/>
+                </i:Interaction.Behaviors>
+                <!--<i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseLeftButtonUp" >
+                        <i:InvokeCommandAction
+                      Command="{Binding CloseCommand}" />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>-->
+                <Path Data="M0,0 L1,1 M0,1 L1,0" StrokeThickness="3" Margin="3" Stretch="Uniform" Stroke="{DynamicResource CloseButtonClr}">
+                </Path>
+                
+
+            </Grid>
+           
+        </Grid>
+        <!--Binded UserControls-->
+        <ContentPresenter Name="Content" Grid.Row="1" Content="{Binding Content}"></ContentPresenter>
+    </Grid>
+</Window>
