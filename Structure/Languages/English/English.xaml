@@ -5,4 +5,13 @@
                     >
     <System:String  x:Key="ChooseReport">Choose Report</System:String>
     <System:String  x:Key="ChooseLogo">Choose Logo</System:String>
+    
+    <!--MianWindow-->
+    <System:String  x:Key="ChangeTheme">Change Theme</System:String>
+    <System:String  x:Key="ChangeLanguge">Change Languge</System:String>
+    <System:String  x:Key="Exit">Exit</System:String>
+    <System:String  x:Key="Options">Options</System:String>
+    <System:String  x:Key="ShowDialog">Show Dialog</System:String>
+    
+
 </ResourceDictionary>

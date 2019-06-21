@@ -87,13 +87,15 @@ namespace Structure.Commands
 
     public class ActionCommand<T, P> : ICommand
     {
-        public event EventHandler CanExecuteChanged;
+ 
         private Action<T, object> _action;
 
         public ActionCommand(Action<T, object> action)
         {
             _action = action;
         }
+
+        public event EventHandler CanExecuteChanged;
 
         public bool CanExecute(object parameter) { return true; }
 
