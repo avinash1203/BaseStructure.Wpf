@@ -8,10 +8,10 @@
             <ResourceDictionary.MergedDictionaries>
                
              
-                <!--<ResourceDictionary Source="Themes/Black/BlackTheme.xaml" />
-                <ResourceDictionary Source="Languages/German/German.xaml" />-->
-                <ResourceDictionary Source="Themes/Orange/OrangeTheme.xaml"/>
-                <ResourceDictionary Source="Languages/English/English.xaml"/>
+                <ResourceDictionary Source="Themes/Black/BlackTheme.xaml" />
+                <ResourceDictionary Source="Languages/German/German.xaml" />
+                <!--<ResourceDictionary Source="Themes/Orange/OrangeTheme.xaml"/>
+                <ResourceDictionary Source="Languages/English/English.xaml"/>-->
                 <ResourceDictionary Source="Styles/Base/ComboBoxStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>  

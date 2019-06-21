@@ -6,7 +6,36 @@
         xmlns:local="clr-namespace:Structure"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Width="120" Height="60" Click="Button_Click" ></Button>
+
+
+    <Grid >
+        <!--makes rounded control, delete OpacityMask and the BorderMask if you don't need that-->
+        <Grid.OpacityMask>
+            <VisualBrush Visual="{Binding ElementName=BorderMask}" />
+        </Grid.OpacityMask>
+        <Border Background="Black" x:Name="BorderMask" CornerRadius="10"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--First Button-->
+            <Button Background="Cyan" Grid.Row="0"/>
+            <!--Second Button-->
+            <Button Background="Gray" Grid.Row="1"/>
+
+            <!--YOUR CONTENT-->
+            <Border  BorderThickness="5" BorderBrush="White" Grid.RowSpan="2">
+            <Ellipse 
+                     Fill="Red" Height="200" Width="200"
+                     Margin="10"/>
+            </Border>
+        </Grid>
     </Grid>
+    <!--<Grid>
+
+        <Button Width="120" Height="60" Click="Button_Click" ></Button>
+    </Grid>-->
 </Window>
