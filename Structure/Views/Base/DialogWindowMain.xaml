@@ -1,0 +1,57 @@
+﻿<Window x:Class="Structure.Views.Base.DialogWindowMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Structure.Views.Base" WindowStartupLocation="CenterScreen"
+        xmlns:Views="clr-namespace:Structure.Views" 
+        mc:Ignorable="d" WindowStyle="None" ResizeMode="NoResize"  SizeToContent="WidthAndHeight"
+       >
+    <Window.Resources>
+        <Style TargetType="Path">
+            <Setter Property="Stroke" Value="{DynamicResource CloseButtonClr}"></Setter>
+            <Setter Property="Stretch" Value="Uniform"></Setter>
+            <Setter Property="StrokeThickness" Value="3"></Setter>
+            <Style.Triggers>
+                <Trigger Property="Border.IsMouseOver" Value="True">
+                    <Setter Property="Stroke" Value="{DynamicResource LableClr}"/>
+                </Trigger>
+                <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource AncestorType=Border}}" Value="True">
+                    <Setter Property="Stroke" Value="{DynamicResource LableClr}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Border BorderThickness="5" BorderBrush="Transparent">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" MaxHeight="40" MinHeight="20" ></RowDefinition>
+                <RowDefinition Height="15*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="Transparent" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock MouseDown="TitleBar_MouseDown"  Grid.Column="0" Text="Specification - prod HF00004" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource CloseButtonClr}" ></TextBlock>
+                    <Rectangle MouseDown="TitleBar_MouseDown" Grid.Column="1" Fill="Transparent" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ></Rectangle>
+                    <Border Width="20" Grid.Column="2" Background="Transparent"  Margin="0,0,5,0" MouseLeftButtonUp="Minimized_MouseLeftButtonUp">
+                        <Path  Data="M0,0 L1,1 M0,1 L1,0" />
+                    </Border>
+                    <Border Width="20" Background="Transparent" Grid.Column="3" MouseLeftButtonUp="Maximized_MouseLeftButtonUp" Margin="0,0,5,0">
+                        <Path   Data="M0,0 L1,1 M0,1 L1,0" />
+                    </Border >
+                    <Border   Grid.Column="4" Background="Transparent" Width="20" MouseLeftButtonUp="Close_MouseLeftButtonUp" Margin="0,0,5,0" >
+                        <Path  Data="M0,0 L1,1 M0,1 L1,0" />
+                    </Border>
+                </Grid>
+            </Grid>
+            <Views:SpecificationView Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+            </Views:SpecificationView>
+        </Grid>
+    </Border>
+</Window>

@@ -60,14 +60,18 @@ namespace Structure.ViewModels
         /// <param name="obj"></param>
         private void ShowDialogWindow(object obj)
         {
-            DialogWindowView dialogWindowView = new DialogWindowView();
-            SelectReportView selectReportView = new SelectReportView();
-            SelectReportViewModel selectReportViewModel = new SelectReportViewModel(true);
-            selectReportViewModel.Content = selectReportView;
-            dialogWindowView.DataContext = selectReportViewModel;
-            selectReportView.DataContext = selectReportViewModel;
-            selectReportViewModel.RequetClose += (s, sa) => dialogWindowView.Close();
-            dialogWindowView.ShowDialog();
+            //DialogWindowView dialogWindowView = new DialogWindowView();
+            //SelectReportView selectReportView = new SelectReportView();
+            //SelectReportViewModel selectReportViewModel = new SelectReportViewModel(true);
+            //selectReportViewModel.Content = selectReportView;
+            //dialogWindowView.DataContext = selectReportViewModel;
+            //selectReportView.DataContext = selectReportViewModel;
+            //selectReportViewModel.RequetClose += (s, sa) => dialogWindowView.Close();
+            //dialogWindowView.ShowDialog();
+
+            DialogWindowMain dialogWindowMain = new DialogWindowMain();
+            dialogWindowMain.ShowDialog();
+
         }
 
         #endregion

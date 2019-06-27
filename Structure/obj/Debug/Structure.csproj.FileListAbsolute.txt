@@ -44,8 +44,6 @@ E:\Prjt\Structure\Structure\bin\Debug\Microsoft.Expression.Interactions.dll
 E:\Prjt\Structure\Structure\bin\Debug\System.Windows.Interactivity.dll
 E:\Prjt\Structure\Structure\bin\Debug\Microsoft.Expression.Interactions.xml
 E:\Prjt\Structure\Structure\bin\Debug\System.Windows.Interactivity.xml
-E:\Prjt\Structure\Structure\obj\Debug\Structure.csprojAssemblyReference.cache
-E:\Prjt\Structure\Structure\obj\Debug\MainWindow.g.cs
 E:\Prjt\Structure\Structure\obj\Debug\Views\Base\DialogWindowView.g.cs
 E:\Prjt\Structure\Structure\obj\Debug\Views\SelectReportView.g.cs
 E:\Prjt\Structure\Structure\obj\Debug\App.g.cs
@@ -56,7 +54,6 @@ E:\Prjt\Structure\Structure\obj\Debug\Structure_MarkupCompile.lref
 E:\Prjt\Structure\Structure\obj\Debug\App.baml
 E:\Prjt\Structure\Structure\obj\Debug\Languages\English\English.baml
 E:\Prjt\Structure\Structure\obj\Debug\Languages\German\German.baml
-E:\Prjt\Structure\Structure\obj\Debug\MainWindow.baml
 E:\Prjt\Structure\Structure\obj\Debug\Styles\Base\ComboBoxStyle.baml
 E:\Prjt\Structure\Structure\obj\Debug\Themes\Black\BlackTheme.baml
 E:\Prjt\Structure\Structure\obj\Debug\Themes\Black\DialogWindowTheme.baml
@@ -109,3 +106,11 @@ E:\Structure-master\Structure-master\Structure\obj\Debug\Structure.csproj.CopyCo
 E:\Structure-master\Structure-master\Structure\obj\Debug\Structure.exe
 E:\Structure-master\Structure-master\Structure\obj\Debug\Structure.pdb
 E:\Structure-master\Structure-master\Structure\obj\Debug\Structure.csprojAssemblyReference.cache
+E:\Prjt\Structure\Structure\obj\Debug\Views\MainWindowView.g.cs
+E:\Prjt\Structure\Structure\obj\Debug\Views\MainWindowView.baml
+E:\Prjt\Structure\Structure\obj\Debug\Structure.csprojAssemblyReference.cache
+E:\Prjt\Structure\Structure\obj\Debug\Views\Base\DialogWindowMain.g.cs
+E:\Prjt\Structure\Structure\obj\Debug\Views\SpecificationView.g.cs
+E:\Prjt\Structure\Structure\obj\Debug\Views\Base\DialogWindowMain.baml
+E:\Prjt\Structure\Structure\obj\Debug\Views\SpecificationView.baml
+E:\Prjt\Structure\Structure\obj\Debug\Styles\Base\CheckBoxStyle.baml

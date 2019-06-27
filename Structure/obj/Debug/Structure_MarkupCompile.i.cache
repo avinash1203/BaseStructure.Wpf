@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Structure-master\Structure-master\Structure\obj\Debug\
+E:\Prjt\Structure\Structure\obj\Debug\
 Structure
 none
 false
 DEBUG;TRACE
-E:\Structure-master\Structure-master\Structure\App.xaml
-11471290525
+E:\Prjt\Structure\Structure\App.xaml
+141480148163
 2-2120811077
-191962139631
-16-1611890700
-Languages\English\English.xaml;Languages\German\German.xaml;Views\MainWindowView.xaml;Styles\Base\ComboBoxStyle.xaml;Themes\Black\BlackTheme.xaml;Themes\Black\DialogWindowTheme.xaml;Themes\Common\CommonClrs.xaml;Themes\Orange\DialogWindowTheme.xaml;Themes\Orange\OrangeTheme.xaml;Views\Base\DialogWindowView.xaml;Views\SelectReportView.xaml;
+231072555688
+18702953413
+Languages\English\English.xaml;Languages\German\German.xaml;Styles\Base\CheckBoxStyle.xaml;Views\Base\DialogWindowMain.xaml;Views\MainWindowView.xaml;Styles\Base\ComboBoxStyle.xaml;Themes\Black\BlackTheme.xaml;Themes\Black\DialogWindowTheme.xaml;Themes\Common\CommonClrs.xaml;Themes\Orange\DialogWindowTheme.xaml;Themes\Orange\OrangeTheme.xaml;Views\Base\DialogWindowView.xaml;Views\SelectReportView.xaml;Views\SpecificationView.xaml;
 
 True
 

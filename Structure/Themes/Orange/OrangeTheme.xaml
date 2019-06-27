@@ -13,5 +13,7 @@
     <SolidColorBrush x:Key="SeparatorClr" Color="{StaticResource #DCE0E4}" />
     <SolidColorBrush x:Key="LableClr" Color="{StaticResource #BBBCBF}" />
     <SolidColorBrush x:Key="ComboBoxBackgroundClr" Color="{StaticResource #Transparent}" />
-    <SolidColorBrush x:Key="ComboBoxBorderBrushClr" Color="{StaticResource #DCE0E4}" /> 
+    <SolidColorBrush x:Key="ComboBoxBorderBrushClr" Color="{StaticResource #DCE0E4}" />
+
+    <SolidColorBrush x:Key="ComboBoxSelectedItemForegroundClr" Color="{StaticResource #787878}" />
 </ResourceDictionary>

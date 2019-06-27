@@ -41,6 +41,8 @@
     <Reference Include="PresentationFramework.Aero" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -67,20 +69,36 @@
     <Compile Include="Base\Interfaces\IWindowSettings.cs" />
     <Compile Include="Commands\EventToCommand.cs" />
     <Compile Include="Commands\RelayCommand .cs" />
+    <Compile Include="Converter\DateTimeNullConverter.cs" />
+    <Compile Include="UIClass\CheckableItem.cs" />
     <Compile Include="ViewModels\Base\DialogWindowViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\SelectReportViewModel.cs" />
+    <Compile Include="Views\Base\DialogWindowMain.xaml.cs">
+      <DependentUpon>DialogWindowMain.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Base\DialogWindowView.xaml.cs">
       <DependentUpon>DialogWindowView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SelectReportView.xaml.cs">
       <DependentUpon>SelectReportView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\SpecificationView.xaml.cs">
+      <DependentUpon>SpecificationView.xaml</DependentUpon>
+    </Compile>
     <Page Include="Languages\English\English.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Languages\German\German.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Base\CheckBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Base\DialogWindowMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -125,6 +143,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\SelectReportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SpecificationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

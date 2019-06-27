@@ -4,10 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Structure" Background="{DynamicResource ManinBackgroundClr}"
-        mc:Ignorable="d"
+        mc:Ignorable="d" 
+           xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:Converter="clr-namespace:Structure.Converter"
         xmlns:cmd="clr-namespace:Structure.Commands"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" >
     <Window.Resources>
         <Style TargetType="MenuItem">
             <Setter Property="Foreground" Value="{DynamicResource LableClr}"></Setter>
@@ -31,7 +33,40 @@
                 <MenuItem Header="{DynamicResource Exit}" Command="{Binding ExitCommand}" />
             </MenuItem>
         </Menu>
+
         <Grid Grid.Column="1" Grid.Row="1">
+
+            <!--<DataGrid Name="drg" AutoGenerateColumns="False"  CanUserAddRows="False" >
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="Date" >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox  BorderThickness="0" >
+                                    <TextBox.Style>
+                                        <Style TargetType="TextBox">
+                                            <Style.Resources>
+                                                <Converter:DateTimeNullConverter x:Key="Time"/>
+                                            </Style.Resources>
+                                            <Setter Property="Text" Value="{Binding Date}"></Setter>
+
+                                            <Style.Triggers>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding Date}" Value="{x:Null}" />
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Mode=Self}, Path=IsKeyboardFocused}" Value="True" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Text" Value="{Binding Date,Converter={StaticResource Time},ConverterParameterBinding="{Binding Date}" }"></Setter>
+                                                </MultiDataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBox.Style>
+
+                                </TextBox>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>-->
             <Button Content="{DynamicResource ShowDialog}"  Width="150" Height="30" Command="{Binding ShowDialogWindowCommand}">
             </Button>
         </Grid>

@@ -19,6 +19,7 @@
                     </ResourceDictionary.MergedDictionaries>
                 </ResourceDictionary>
                 <ResourceDictionary Source="Styles/Base/ComboBoxStyle.xaml"/>
+                <ResourceDictionary Source="Styles/Base/CheckBoxStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>  
     </Application.Resources>

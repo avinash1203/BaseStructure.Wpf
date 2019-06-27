@@ -18,4 +18,9 @@
 
     <!--LightBrown-->
     <Color x:Key="#Transparent">Transparent</Color>
+
+    <Color x:Key="#787878">#787878</Color>
+
+
+    
 </ResourceDictionary>

@@ -16,13 +16,12 @@ namespace Structure.ViewModels.Base
         public event EventHandler RequetClose;
 
         #endregion
-
-
+        
         #region Icommand
 
         public ICommand CloseCommand { get; set; }
 
-        //public ICommand HeaderMouseDown { get; set; }
+      
 
         public ActionCommand<MouseButtonEventArgs, object> HeaderMouseDown { get; private set; }
 

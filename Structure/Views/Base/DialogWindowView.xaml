@@ -36,7 +36,7 @@
                       Command="{Binding CloseCommand}" />
                     </i:EventTrigger>
                 </i:Interaction.Triggers>-->
-                <Path Data="M0,0 L1,1 M0,1 L1,0" StrokeThickness="3" Margin="3" Stretch="Uniform" Stroke="{DynamicResource CloseButtonClr}">
+                <Path Data="M0,0 L1,1 M0,1 L1,0" StrokeThickness="3" Margin="3" Stretch="Uniform" Stroke="{DynamicResource CloseButtonClr}" >
                 </Path>
                 
 
