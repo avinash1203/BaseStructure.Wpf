@@ -25,9 +25,9 @@ namespace Structure.Views
         public SpecificationView()
         {
             List<CheckableItem> checkableItems = new List<CheckableItem>();
-            checkableItems.Add(new CheckableItem { Value = "1", IsChecked = !false, Children = new List<CheckableItem> { new CheckableItem { Value = "1", IsChecked = !false }, new CheckableItem { Value = "2", IsChecked = !false }, new CheckableItem { Value = "3", IsChecked = !false } } });
-            checkableItems.Add(new CheckableItem { Value = "1", IsChecked = !false, Children = new List<CheckableItem> { new CheckableItem { Value = "1", IsChecked = !false }, new CheckableItem { Value = "2", IsChecked = !false }, new CheckableItem { Value = "3", IsChecked = !false } } });
-            checkableItems.Add(new CheckableItem { Value = "1", IsChecked = !false, Children = new List<CheckableItem> { new CheckableItem { Value = "1", IsChecked = !false }, new CheckableItem { Value = "2", IsChecked = !false }, new CheckableItem { Value = "3", IsChecked = !false } } });
+            checkableItems.Add(new CheckableItem { Name = "1", IsChecked = !false, Children = new List<CheckableItem> { new CheckableItem { Name = "1", IsChecked = !false }, new CheckableItem { Name = "2", IsChecked = !false }, new CheckableItem { Name = "3", IsChecked = !false } } });
+            checkableItems.Add(new CheckableItem { Name = "1", IsChecked = !false, Children = new List<CheckableItem> { new CheckableItem { Name = "1", IsChecked = !false }, new CheckableItem { Name = "2", IsChecked = !false }, new CheckableItem { Name = "3", IsChecked = !false } } });
+            checkableItems.Add(new CheckableItem { Name = "1", IsChecked = !false, Children = new List<CheckableItem> { new CheckableItem { Name = "1", IsChecked = !false }, new CheckableItem { Name = "2", IsChecked = !false }, new CheckableItem { Name = "3", IsChecked = !false } } });
             InitializeComponent();
             tree.ItemsSource = checkableItems;
         }

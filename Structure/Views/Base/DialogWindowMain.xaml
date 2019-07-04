@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Structure.Views.Base" WindowStartupLocation="CenterScreen"
-        xmlns:Views="clr-namespace:Structure.Views" 
-        mc:Ignorable="d" WindowStyle="None" ResizeMode="NoResize"  SizeToContent="WidthAndHeight"
+        xmlns:Views="clr-namespace:Structure.Views" MaxHeight="1000" MaxWidth="1000" 
+        mc:Ignorable="d" WindowStyle="None" ResizeMode="NoResize"  SizeToContent="Manual"
        >
     <Window.Resources>
         <Style TargetType="Path">
@@ -27,6 +27,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" MaxHeight="40" MinHeight="20" ></RowDefinition>
                 <RowDefinition Height="15*"></RowDefinition>
+                <RowDefinition Height="*" MaxHeight="40" MinHeight="20" ></RowDefinition>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Background="Transparent" >
                 <Grid>
@@ -50,8 +51,19 @@
                     </Border>
                 </Grid>
             </Grid>
-            <Views:SpecificationView Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
-            </Views:SpecificationView>
+
+   
+
+       
+            <Grid Visibility="Visible" Grid.Row="1" Name="ContentGrid" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+              
+            </Grid>
+
+            <Grid Grid.Row="2" Background="Red">
+                
+            </Grid>
         </Grid>
+        
+        
     </Border>
 </Window>

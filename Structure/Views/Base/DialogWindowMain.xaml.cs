@@ -1,4 +1,9 @@
-﻿using System.Windows;
+﻿using Structure.UIClass;
+using System.Collections.Generic;
+using System.Threading;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 
 namespace Structure.Views.Base
@@ -8,11 +13,13 @@ namespace Structure.Views.Base
     /// </summary>
     public partial class DialogWindowMain : Window
     {
-        public DialogWindowMain()
-        {
-            InitializeComponent();
+        WindowSettings windowSettings { get; set; }
 
-         
+        public DialogWindowMain() => InitializeComponent();
+        internal DialogWindowMain(WindowSettings windowSettings) : this()
+        {
+            this.windowSettings = windowSettings;
+            AdjustWindowSize();
         }
         /// <summary>
         /// TitleBar_MouseDown - Drag if single-click, resize if double-click
@@ -36,17 +43,24 @@ namespace Structure.Views.Base
         /// </summary>
         private void AdjustWindowSize()
         {
-            if (this.WindowState == WindowState.Maximized)
+            if (double.IsNaN(this.Height) || this.Height != windowSettings.NormalHeight)
             {
-                this.WindowState = WindowState.Normal;
-
+                this.Height = windowSettings.NormalHeight;
+                this.Width = windowSettings.NormalWidth;
             }
             else
             {
-                this.SizeToContent = System.Windows.SizeToContent.Manual;
-                this.WindowState = WindowState.Maximized;
+                this.Height = windowSettings.MaxHeight;
+                this.Width = windowSettings.MaxWidth;
 
             }
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            //else
+            //{
+            //    // this.SizeToContent = System.Windows.SizeToContent.Manual;
+            //    //this.WindowState = WindowState.Maximized;
+
+            //}
 
         }
 
@@ -65,6 +79,8 @@ namespace Structure.Views.Base
         ///// </summary>
         private void Maximized_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
+            //this.Height = 300;
+            //this.Width = 300;
             AdjustWindowSize();
         }
         ///// <summary>
@@ -72,10 +88,18 @@ namespace Structure.Views.Base
         ///// </summary>
         private void Minimized_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-         
+
             this.WindowState = WindowState.Minimized;
         }
 
-       
+        List<Thread> RunningThreads = new List<Thread>();
+      
+      
+
+
+
+
     }
+    
+   
 }

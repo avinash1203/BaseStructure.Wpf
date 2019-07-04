@@ -1,5 +1,6 @@
 ﻿using Structure.Base.AbstractClass;
 using Structure.Commands;
+using Structure.UIClass;
 using Structure.Views;
 using Structure.Views.Base;
 using System.Windows;
@@ -22,6 +23,8 @@ namespace Structure.ViewModels
 
         internal MainWindowViewModel()
         {
+
+
             ShowDialogWindowCommand = new RelayCommand(ShowDialogWindow);
             ChangeThemeCommand = new RelayCommand(ChangeTheme);
             ChangeLangugeCommand = new RelayCommand(ChangeLanguge);
@@ -69,7 +72,8 @@ namespace Structure.ViewModels
             //selectReportViewModel.RequetClose += (s, sa) => dialogWindowView.Close();
             //dialogWindowView.ShowDialog();
 
-            DialogWindowMain dialogWindowMain = new DialogWindowMain();
+            DialogWindowMain dialogWindowMain = new DialogWindowMain(new WindowSettings { MaxHeight = 650, MaxWidth = 600, NormalHeight = 650, NormalWidth = 530 });
+            dialogWindowMain.ContentGrid.Children.Add(new SpecificationView());
             dialogWindowMain.ShowDialog();
 
         }

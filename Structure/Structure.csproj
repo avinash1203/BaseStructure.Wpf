@@ -71,6 +71,8 @@
     <Compile Include="Commands\RelayCommand .cs" />
     <Compile Include="Converter\DateTimeNullConverter.cs" />
     <Compile Include="UIClass\CheckableItem.cs" />
+    <Compile Include="UIClass\VirtualToggleButton.cs" />
+    <Compile Include="UIClass\WindowSettings.cs" />
     <Compile Include="ViewModels\Base\DialogWindowViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\SelectReportViewModel.cs" />
@@ -180,6 +182,12 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Resource Include="Assets\Icons\OrangeTheme\Check_box2_Checked.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Icons\OrangeTheme\Check_box_Unchecked.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Content Include="Assets\Icons\OrangeTheme\CompanyIcon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

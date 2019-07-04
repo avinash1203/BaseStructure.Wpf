@@ -17,7 +17,7 @@
             <i:Interaction.Behaviors>
                 <cmd:EventToCommand Command="{Binding HeaderMouseDown}" Event="MouseDown" CommandParameter="sss" PassArguments="True"/>
             </i:Interaction.Behaviors>
-          
+
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
@@ -38,12 +38,15 @@
                 </i:Interaction.Triggers>-->
                 <Path Data="M0,0 L1,1 M0,1 L1,0" StrokeThickness="3" Margin="3" Stretch="Uniform" Stroke="{DynamicResource CloseButtonClr}" >
                 </Path>
-                
+
 
             </Grid>
-           
+
         </Grid>
         <!--Binded UserControls-->
-        <ContentPresenter Name="Content" Grid.Row="1" Content="{Binding Content}"></ContentPresenter>
+        <ContentPresenter Name="Content" Grid.Row="1" Content="{Binding Content}" Visibility="Collapsed" ></ContentPresenter>
+       <Grid Name="CGrid" Margin="25,25,31,86" Grid.ColumnSpan="1" Width="392" Height="550" Grid.Column="1" >
+      
+    </Grid>
     </Grid>
 </Window>

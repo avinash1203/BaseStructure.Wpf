@@ -8,7 +8,8 @@
         <ResourceDictionary Source="/Themes/Common/CommonClrs.xaml" ></ResourceDictionary>
         <ResourceDictionary Source="DialogWindowTheme.xaml"  ></ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
-
+    <BitmapImage x:Key="CheckboxChecked" UriSource="../../Assets/Icons/OrangeTheme/Check_box2_Checked.png"></BitmapImage>
+    <BitmapImage x:Key="CheckboxUnChecked" UriSource="../../Assets/Icons/OrangeTheme/Check_box_Unchecked.png"></BitmapImage>
     <SolidColorBrush x:Key="ManinBackgroundClr" Color="{StaticResource #FFFFFF}" />
     <SolidColorBrush x:Key="SeparatorClr" Color="{StaticResource #DCE0E4}" />
     <SolidColorBrush x:Key="LableClr" Color="{StaticResource #BBBCBF}" />

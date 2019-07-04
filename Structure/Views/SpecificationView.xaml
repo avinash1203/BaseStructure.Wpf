@@ -6,6 +6,7 @@
             xmlns:UIClass="clr-namespace:Structure.UIClass"
              xmlns:local="clr-namespace:Structure.Views" MinHeight="500" MinWidth="450"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
              mc:Ignorable="d" Background="Transparent" 
+             xmlns:dw="clr-namespace:Structure.UIClass"
             >
     <UserControl.Resources>
         <Style x:Key="SubHeaderStyle" TargetType="{x:Type TextBlock}">
@@ -13,12 +14,28 @@
             <Setter Property="Foreground" Value="{DynamicResource LableClr}"></Setter>
         </Style>
 
-        <HierarchicalDataTemplate
-         DataType="{x:Type UIClass:CheckableItem}" 
-            ItemsSource="{Binding Children}">
+        <Style x:Key="TreeViewItemStyle" TargetType="TreeViewItem">
+            <Setter Property="IsExpanded" Value="True" />
+            <Setter Property="IsSelected" Value="{Binding IsInitiallySelected, Mode=OneTime}" />
+            <Setter Property="KeyboardNavigation.AcceptsReturn" Value="True" />
+            <Setter Property="dw:VirtualToggleButton.IsVirtualToggleButton" Value="True"></Setter>
+            <Setter Property="dw:VirtualToggleButton.IsChecked" Value="{Binding IsChecked}" />
+        </Style>
+
+        <HierarchicalDataTemplate 
+        x:Key="CheckBoxItemTemplate"
+        ItemsSource="{Binding Children, Mode=OneTime}"
+        >
             <StackPanel Orientation="Horizontal">
-                <CheckBox IsChecked="{Binding IsChecked}" Style="{DynamicResource CheckBoxStyle}"/>
-                <TextBlock Text="1" Style="{DynamicResource SubHeaderStyle}"/>
+                <CheckBox
+            Focusable="False"   Style="{DynamicResource CheckboxStyleImage}"
+            IsChecked="{Binding IsChecked}" 
+            VerticalAlignment="Center"
+            />
+                <ContentPresenter 
+            Content="{Binding Name, Mode=OneTime}" 
+            Margin="2,0"
+            />
             </StackPanel>
         </HierarchicalDataTemplate>
         <Style x:Key="HeaderStyle" TargetType="{x:Type TextBlock}">
@@ -96,7 +113,6 @@
             <StackPanel VerticalAlignment="Stretch" >
                 <CheckBox Grid.Row="0"  VerticalAlignment="Bottom" VerticalContentAlignment="Top" Content="something" Style="{DynamicResource CheckBoxStyle}"/>
                 <Separator Margin="0" VerticalAlignment="Bottom"></Separator>
-
             </StackPanel>
         </Border>
         <Border Grid.Column="1" BorderBrush="{DynamicResource LableClr}" BorderThickness="1" Grid.Row="2" Margin="3">
@@ -110,10 +126,14 @@
         <Grid Grid.Row="4" VerticalAlignment="Stretch" Margin="3">
             <StackPanel>
                 <TextBlock Text="GDA Countery" Style="{DynamicResource SubHeaderStyle}"></TextBlock>
+
+
+
                 <ComboBox SelectedIndex="0" Style="{DynamicResource ComboBoxStyle}">
                     <ComboBoxItem>SpecPage AG</ComboBoxItem>
                     <ComboBoxItem>SpecPage AG</ComboBoxItem>
                     <ComboBoxItem>SpecPage AG</ComboBoxItem>
+
                 </ComboBox>
             </StackPanel>
         </Grid>
@@ -132,7 +152,9 @@
             <StackPanel VerticalAlignment="Stretch" >
                 <CheckBox Grid.Row="0" VerticalAlignment="Center" Content="something" Style="{DynamicResource CheckBoxStyle}"/>
                 <Separator  Margin="0" VerticalAlignment="Bottom"></Separator>
-                <TreeView Name="tree" BorderThickness="0"/>
+                <TreeView x:Name="tree" ItemContainerStyle="{StaticResource TreeViewItemStyle}" ItemsSource="{Binding Mode=OneTime}"
+                  ItemTemplate="{StaticResource CheckBoxItemTemplate}" BorderThickness="0"
+      />
             </StackPanel>
         </Border>
         <TextBlock  Text="Inspection Plan" Style="{DynamicResource HeaderStyle}" Grid.Row="6"></TextBlock>
@@ -157,7 +179,7 @@
                 </ComboBox>
             </StackPanel>
         </Grid>
-        <CheckBox Grid.Row="8" Content="something" Style="{DynamicResource CheckBoxStyle}" IsChecked="True" ></CheckBox>
+        <CheckBox FontSize="10"  Grid.Row="8" Content="Something" Style="{DynamicResource CheckboxStyleImage}" IsChecked="True" ></CheckBox>
         <Button Grid.Row="9" Grid.Column="1" Height="25" Width="50" HorizontalAlignment="Right"></Button>
     </Grid>
 </UserControl>
